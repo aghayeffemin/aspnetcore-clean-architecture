@@ -1,4 +1,5 @@
-﻿using aspnetcore_clean_architecture.Application.Features.Users.Queries;
+﻿using aspnetcore_clean_architecture.Application.Features.Users.Commands;
+using aspnetcore_clean_architecture.Application.Features.Users.Queries;
 using aspnetcore_clean_architecture.Domain.Entities;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -27,6 +28,27 @@ namespace aspnetcore_clean_architecture.API.Controllers
         {
             var user = await _mediator.Send(new GetUserByIdQuery.Query { Id = id });
             return Ok(user);
+        }
+
+        [HttpPost]
+        public async Task<ActionResult> Add(AddUserCommand.Command command)
+        {
+            await _mediator.Send(command);
+            return Ok();
+        }
+
+        [HttpPut]
+        public async Task<ActionResult> Update(UpdateUserCommand.Command command)
+        {
+            await _mediator.Send(command);
+            return Ok();
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> Delete(Guid id)
+        {
+            await _mediator.Send(new DeleteUserCommand.Command { Id = id });
+            return Ok();
         }
     }
 }
