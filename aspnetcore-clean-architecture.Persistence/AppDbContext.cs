@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace aspnetcore_clean_architecture.Persistence
 {
-    internal class AppDbContext : DbContext
+    public class AppDbContext : DbContext
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
