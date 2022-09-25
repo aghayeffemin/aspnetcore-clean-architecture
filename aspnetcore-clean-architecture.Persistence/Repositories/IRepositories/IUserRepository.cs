@@ -2,7 +2,7 @@
 
 namespace aspnetcore_clean_architecture.Persistence.Repositories.IRepositories
 {
-    internal interface IUserRepository : IGenericRepository<User>
+    public interface IUserRepository : IGenericRepository<User>
     {
     }
 }
