@@ -4,7 +4,16 @@
     <TargetFramework>net6.0</TargetFramework>
     <RootNamespace>aspnetcore_clean_architecture.Application</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+    <Nullable>disable</Nullable>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\aspnetcore-clean-architecture.Persistence\aspnetcore-clean-architecture.Persistence.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Features\Users\Commands\" />
+    <Folder Include="Features\Users\Queries\" />
+  </ItemGroup>
 
 </Project>

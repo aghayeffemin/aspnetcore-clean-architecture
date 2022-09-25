@@ -338,3 +338,8 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+
+# SQLite Database files
+aspnetcore-clean-architecture.API/app.db
+aspnetcore-clean-architecture.API/app.db-shm
+aspnetcore-clean-architecture.API/app.db-wal
