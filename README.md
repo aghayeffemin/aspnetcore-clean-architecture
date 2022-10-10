@@ -12,6 +12,8 @@ You can follow the development process via commit messages
 - added repositories
 - added user queries
 - added commands
+- test project setup
+- added first test class and method
 
 ## Setup
 
